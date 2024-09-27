@@ -17,15 +17,9 @@ function generarCombinaciones() {
           let extBeginning2 = extension.slice(1, 4);
 
           if (nounEnd1 === extBeginning1) {
-            combinacion = `${pronombre}${adjetivo}${nombre.slice(
-              0,
-              -2
-            )}${extension}`;
+            combinacion = `${pronombre}${adjetivo}${nombre.slice(0,-2)}${extension}`;
           } else if (nounEnd2 === extBeginning2) {
-            combinacion = `${pronombre}${adjetivo}${nombre.slice(
-              0,
-              -3
-            )}${extension}`;
+            combinacion = `${pronombre}${adjetivo}${nombre.slice(0, -3)}${extension}`;
           } else {
             combinacion = `${pronombre}${adjetivo}${nombre}${extension}`;
           }
@@ -34,10 +28,7 @@ function generarCombinaciones() {
       }
     }
   }
-
-
-  // eslint-disable-next-line no-console
+// eslint-disable-next-line no-console
   console.log(combinaciones);
 }
-
 generarCombinaciones();
