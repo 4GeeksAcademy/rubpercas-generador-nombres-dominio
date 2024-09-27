@@ -1,4 +1,4 @@
-let pronoun = ["the", "our", "your", "my", "a"];
+let pronoun = ["the", "our", "your", "my", "some"];
 let adj = ["great", "big", "perfect", "correct", "nice"];
 let noun = ["jogger", "racoon", "giant", "beast", "ninja"];
 let ext = [".com", ".es", ".net", ".io", ".org"];
@@ -10,13 +10,14 @@ function generarCombinaciones() {
     for (const adjetivo of adj) {
       for (const nombre of noun) {
         for (const extension of ext) {
-          const combinacion = `${pronombre}${adjetivo}${nombre}${extension}`;
+          const combinacion = ` ${pronombre}${adjetivo}${nombre}${extension}\n`;
           combinaciones.push(combinacion);
         }
       }
     }
   }
-  console.log (combinaciones);
+  return combinaciones;
+  // console.log(combinaciones);
 }
 
-generarCombinaciones();
+document.getElementById("dominios").innerHTML = generarCombinaciones();
