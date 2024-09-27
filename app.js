@@ -35,6 +35,8 @@ function generarCombinaciones() {
     }
   }
 
+
+  // eslint-disable-next-line no-console
   console.log(combinaciones);
 }
 
