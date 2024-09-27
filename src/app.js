@@ -11,10 +11,10 @@ function generarCombinaciones() {
     for (let adjetivo of adj) {
       for (let nombre of noun) {
         for (let extension of ext) {
-          const nounEnd1 = nombre.slice(-2);
-          const extBeginning1 = extension.slice(1, 3);
-          const nounEnd2 = nombre.slice(-3);
-          const extBeginning2 = extension.slice(1, 4);
+          let nounEnd1 = nombre.slice(-2);
+          let extBeginning1 = extension.slice(1, 3);
+          let nounEnd2 = nombre.slice(-3);
+          let extBeginning2 = extension.slice(1, 4);
 
           if (nounEnd1 === extBeginning1) {
             combinacion = `${pronombre}${adjetivo}${nombre.slice(
