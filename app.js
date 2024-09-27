@@ -27,7 +27,7 @@ function generarCombinaciones() {
               -3
             )}${extension}`;
           } else {
-            combinacion = ` ${pronombre}${adjetivo}${nombre}${extension}`;
+            combinacion = `${pronombre}${adjetivo}${nombre}${extension}`;
           }
           combinaciones.push(combinacion);
         }
@@ -35,7 +35,7 @@ function generarCombinaciones() {
     }
   }
 
-  return combinaciones;
+  console.log(combinaciones);
 }
 
-document.getElementById("dominios").innerHTML = generarCombinaciones();
+generarCombinaciones();
