@@ -3,6 +3,9 @@ let adj = ["great", "big", "perfect", "correct", "nice"];
 let noun = ["jogger", "racoon", "giant", "beast", "ninja", "bebes", "capcom"];
 let ext = [".com", ".es", ".net", ".io", ".org"];
 
+
+console.time("bucle");
+
 function generarCombinaciones() {
   const combinaciones = [];
   let combinacion = "";
@@ -16,19 +19,32 @@ function generarCombinaciones() {
           let nounEnd2 = nombre.slice(-3);
           let extBeginning2 = extension.slice(1, 4);
 
+          combinacion = `${pronombre}${adjetivo}${nombre}${extension}`;
+
           if (nounEnd1 === extBeginning1) {
-            combinacion = `${pronombre}${adjetivo}${nombre.slice(0,-2)}${extension}`;
-          } else if (nounEnd2 === extBeginning2) {
-            combinacion = `${pronombre}${adjetivo}${nombre.slice(0, -3)}${extension}`;
-          } else {
-            combinacion = `${pronombre}${adjetivo}${nombre}${extension}`;
+          combinacion = `${pronombre}${adjetivo}${nombre.slice(0,-2)}${extension}`;
           }
-          combinaciones.push(combinacion);
+
+          if (nounEnd2 === extBeginning2) {
+          combinacion = `${pronombre}${adjetivo}${nombre.slice(0, -3)}${extension}`;
         }
+          
+          
+
+          combinaciones.push(combinacion);
+          
+        }
+        
       }
     }
   }
 // eslint-disable-next-line no-console
   console.log(combinaciones);
+
+  
 }
 generarCombinaciones();
+
+console.timeEnd("bucle");
+
+
